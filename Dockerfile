@@ -12,6 +12,7 @@ RUN mkdir src
 ADD requirements.txt /app
 
 RUN apt-get update && apt-get install build-essential curl -y && \
+    pip3 install -U pip && \
     pip3 install -r requirements.txt && \
     apt-get --purge autoremove build-essential -y
 
