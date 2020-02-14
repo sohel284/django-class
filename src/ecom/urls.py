@@ -20,5 +20,6 @@ from core.views import HealthCheck
 urlpatterns = [
     path('jet/', include('jet.urls', 'jet')),
     path('admin/', admin.site.urls),
-    path('', HealthCheck.as_view())
+    path('', HealthCheck.as_view()),
+    path('categories/', include('category.urls')),
 ]
